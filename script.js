@@ -1,11 +1,7 @@
 const backToTop = document.getElementById('back-to-top');
 const moviesArea = document.getElementById('movies-area');
 const selectMovie = document.getElementById('movie-select');
-const registerBtn = document.getElementById('sign-up');
 
-registerBtn.addEventListener('click', ()=>{
-    location.href = 'register.html'
-})
 
 /**
  * When user scrolls down the arrow will show up

@@ -22,39 +22,55 @@
     <title>Register | Netflix Lookalike</title>
   </head>
   <body>
-    <div class="register-title">
-      <h1 class="title">Registrujte se</h1>
-    </div>
-    <form action="" class="sign-up"></form>
-    <input
-      type="text"
-      placeholder="Křestní jméno"
-      id="name"
-      class="register-form"
-    />
-    <input
-      type="text"
-      placeholder="Příjmení"
-      id="surname"
-      class="register-form"
-    />
-    <input
-      type="email"
-      placeholder="Přihlašovací e-mail"
-      id="email"
-      class="register-form"
-    />
-    <input
-      type="password"
-      placeholder="Vaše heslo"
-      id="password"
-      class="register-form"
-    />
-    <input
-      type="password"
-      placeholder="Heslo znovu"
-      id="password-again"
-      class="register-form"
-    />
+    <nav class="navigation">
+      <div class="logo-img-container">
+        <img
+          class="logo"
+          src="./assets/img/netflix-logo.png"
+          alt="Netflix logo"
+        />
+      </div>
+      <a href="index.html"
+        ><button class="homepage" id="homepage">Úvodní strana</button></a
+      >
+    </nav>
+
+    <main>
+      <h1 class="title" id="register-title">Registrujte se</h1>
+
+      <form action="" class="sign-up-form">
+        <input
+          type="text"
+          placeholder="Křestní jméno"
+          id="name"
+          class="register-form"
+        />
+        <input
+          type="text"
+          placeholder="Příjmení"
+          id="surname"
+          class="register-form"
+        />
+        <input
+          type="email"
+          placeholder="Přihlašovací e-mail"
+          id="email"
+          class="register-form"
+        />
+        <input
+          type="password"
+          placeholder="Vaše heslo"
+          id="password"
+          class="register-form"
+        />
+        <input
+          type="password"
+          placeholder="Heslo znovu"
+          id="password-again"
+          class="register-form"
+        />
+        <button>Odeslat</button>
+      </form>
+    </main>
   </body>
 </html>

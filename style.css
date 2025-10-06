@@ -42,6 +42,7 @@ body {
   padding: 22px 24px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .logo-img-container {
@@ -97,10 +98,13 @@ button:hover {
   padding: 0 10px;
 }
 
-.title {
-  font-size: var(--h1-size-mobile);
+#hero-title {
   display: flex;
   flex-direction: column;
+}
+
+.title {
+  font-size: var(--h1-size-mobile);
   color: var(--white-color);
 }
 
@@ -224,9 +228,20 @@ footer {
 }
 
 /** register.html **/
-.sign-up-title {
-  color: var(--white-color);
-  font-size: var(--h1-size-mobile);
+#register-title {
+  text-align: center;
+  margin: 42px;
+}
+
+.sign-up-form {
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  max-width: 520px;
+  margin: auto;
+  gap: 16px;
+  justify-content: center;
+  min-height: 50vh;
 }
 
 /** movies.html **/

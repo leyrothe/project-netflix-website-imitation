@@ -31,7 +31,7 @@
           alt="Netflix logo"
         />
       </div>
-      <button class="sign-up">Registrace</button>
+      <button class="sign-up" id="sign-up">Registrace</button>
     </nav>
 
     <main>
@@ -39,7 +39,7 @@
       <section class="hero-section">
         <div class="hero-overlay"></div>
         <div class="hero-content-wrapper">
-          <h1 class="hero-title">
+          <h1 class="title">
             <span>Neomezené sledování</span> <span>filmů, TV pořadů a</span>
             <span>dalšího obsahu</span>
           </h1>
@@ -49,12 +49,18 @@
             zadejte e-mail.
           </p>
           <form class="start-form">
-            <input type="email" placeholder="E-mail" id="email" class="email" />
+            <input
+              type="email"
+              placeholder="E-mailová adresa"
+              id="email"
+              class="email"
+            />
             <button class="start">Začít</button>
           </form>
         </div>
       </section>
 
+      <!--movies section-->
       <section class="movies-section">
         <div class="movies-wrapper">
           <img

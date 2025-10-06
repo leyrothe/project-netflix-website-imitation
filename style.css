@@ -5,7 +5,7 @@
   --background-color: #000;
   --white-color: #fff;
   --link-color: rgba(255, 255, 255, 0.7);
-  --button-font-size-mobile: 16px;
+  --button-font-size: 16px;
   --button-border-radius: 4px;
   --h1-size-mobile: 30px;
   --h1-size-tablet: 36px;
@@ -55,7 +55,7 @@ body {
 
 button {
   color: var(--white-color);
-  font-size: var(--button-font-size-mobile);
+  font-size: var(--button-font-size);
   background-color: var(--primary-color);
   padding: 8px 16px;
   border: none;
@@ -91,15 +91,17 @@ button:hover {
   text-align: center;
   color: var(--white-color);
   top: 35%;
-  max-width: 560px;
+  max-width: 600px;
   width: 100%;
   margin: auto;
+  padding: 0 10px;
 }
 
-.hero-title {
+.title {
   font-size: var(--h1-size-mobile);
   display: flex;
   flex-direction: column;
+  color: var(--white-color);
 }
 
 .hero-subtitle {
@@ -111,6 +113,13 @@ button:hover {
 .hero-text {
   font-size: var(--paragraph-font-size);
   margin: 12px 0;
+}
+
+.hero-text,
+.hero-subtitle,
+.hero-text,
+.footer-link {
+  line-height: 1.5;
 }
 
 .start-form {
@@ -137,6 +146,7 @@ input {
   display: flex;
   flex-direction: column;
   gap: 32px;
+  padding: 32px 0;
 }
 
 .movies-wrapper {
@@ -167,8 +177,10 @@ footer {
   background-color: var(--background-color);
   display: flex;
   gap: 12px;
-  flex-direction: column;
-  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: auto;
+  justify-content: space-between;
   padding: 16px 24px;
 }
 
@@ -176,6 +188,7 @@ footer {
   color: var(--link-color);
   text-decoration: underline;
   font-size: 12px;
+  flex: 0 0 158px;
 }
 
 .footer-link:hover {
@@ -189,7 +202,6 @@ footer {
   right: 32px;
   width: 62px;
   height: 62px;
-  /* display: none; hidden by default */
   cursor: pointer;
   z-index: 1000;
   fill: var(--primary-color);
@@ -238,8 +250,8 @@ select {
   background-color: var(--background-color);
 }
 
-@media (min-width: 768px) {
-  /* rules for displays that are above 768px => for tablet */
+@media (min-width: 715px) {
+  /* rules for displays that are above 715px  */
   .start-form {
     flex-direction: row;
     gap: 16px;
@@ -257,5 +269,29 @@ select {
 
   .movie-poster {
     margin: 0;
+  }
+
+  .title {
+    font-size: var(--h1-size-tablet);
+  }
+
+  .hero-subtitle {
+    font-size: var(--h2-size-tablet);
+  }
+
+  footer {
+    justify-content: flex-start;
+    max-width: 730px;
+  }
+}
+
+@media (min-width: 992px) {
+  /* rules for displays that are above 992px */
+  .title {
+    font-size: var(--h1-size-desktop);
+  }
+
+  .hero-subtitle {
+    font-size: var(--h2-size-desktop);
   }
 }

@@ -1,5 +1,11 @@
 const backToTop = document.getElementById('back-to-top');
-const movies = document.getElementById('movies-area');
+const moviesArea = document.getElementById('movies-area');
+const selectMovie = document.getElementById('movie-select');
+const registerBtn = document.getElementById('sign-up');
+
+registerBtn.addEventListener('click', ()=>{
+    location.href = 'register.html'
+})
 
 /**
  * When user scrolls down the arrow will show up
@@ -18,3 +24,22 @@ window.addEventListener('scroll', () => {
 backToTop.addEventListener('click', () => {
     window.scrollTo({top:0});
 })
+
+
+// const createUser = (data) => {
+//   const movie = document.createElement("div");
+
+//   const movieData = data.results[0];
+//   const movieName = movieData.name;
+//   const picture = movieData.image.original;
+
+//   movie.innerHTML = `
+//   <img src="${picture}" alt="${movieName}"/>
+//   `;
+
+//   return movie;
+// };
+
+// selectMovie.addEventListener('change', () =>{
+    
+// })

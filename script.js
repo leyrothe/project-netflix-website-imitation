@@ -2,7 +2,6 @@ const backToTop = document.getElementById('back-to-top');
 const moviesArea = document.getElementById('movies-area');
 const selectMovie = document.getElementById('movie-select');
 
-
 /**
  * When user scrolls down the arrow will show up
  */
@@ -22,20 +21,33 @@ backToTop.addEventListener('click', () => {
 })
 
 
-// const createUser = (data) => {
-//   const movie = document.createElement("div");
-
-//   const movieData = data.results[0];
-//   const movieName = movieData.name;
-//   const picture = movieData.image.original;
-
-//   movie.innerHTML = `
-//   <img src="${picture}" alt="${movieName}"/>
-//   `;
-
-//   return movie;
-// };
-
-// selectMovie.addEventListener('change', () =>{
+selectMovie.addEventListener('change', (event) =>{
+    const selectValue = event.target.value;
+    const urlData = 'https://api.tvmaze.com/search/shows?q=' + selectValue
+    getMovie(urlData);
     
-// })
+})
+
+const createMovie = (movieElement) => {
+  const movie = document.createElement("div");
+        
+  const image = movieElement.show.image?.original;
+  const movieName = movieElement.show.name;
+
+  movie.innerHTML = `
+  <img src="${image}" alt="Name of this movie is ${movieName}"/>
+  `;
+
+  return movie;
+};
+
+const getMovie = async(url) => {
+    const json = await fetch(url);
+    const data = await json.json();
+
+    data.forEach(movieElement => {
+     const element = createMovie(movieElement);
+     moviesArea.append(element)
+    });
+   
+}

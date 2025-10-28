@@ -145,6 +145,7 @@ input {
   font-size: 24px;
 }
 
+.home-movies-section,
 .movies-section {
   background-color: var(--background-color);
   display: flex;
@@ -153,6 +154,7 @@ input {
   padding: 32px 0;
 }
 
+.home-movies-wrapper,
 .movies-wrapper {
   padding: 16px;
   display: flex;
@@ -160,13 +162,13 @@ input {
   gap: 16px;
 }
 
-.movie-poster {
+.home-movie-poster {
   width: 220px;
   height: 320px;
   margin: auto;
 }
 
-.movie-poster:hover {
+.home-movie-poster:hover {
   transform: scale(1.1);
 }
 
@@ -227,7 +229,6 @@ footer {
   display: block;
 }
 
-/** register.html **/
 #register-title {
   text-align: center;
   margin: 42px;
@@ -244,19 +245,18 @@ footer {
   min-height: 50vh;
 }
 
-/** movies.html **/
-.home-area,
-.movies-area {
+.upper-section {
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 24px;
 }
-.home-area {
+
+.homepage-btn {
   margin-top: 36px;
 }
-.movies-area {
-  margin-top: 24px;
-  flex-direction: column;
-}
+
 select {
   padding: 8px;
   border: 2px solid var(--primary-color);
@@ -265,8 +265,27 @@ select {
   background-color: var(--background-color);
 }
 
+.movie-poster {
+  width: 220px;
+  height: 320px;
+  margin: auto;
+  transform: rotate(5deg);
+}
+
+.movie-poster:hover {
+  transform: rotate(0deg);
+}
+
+.invalid {
+  border-color: var(--primary-color);
+}
+.valid {
+  border-color: green;
+}
+
 @media (min-width: 715px) {
   /* rules for displays that are above 715px  */
+
   .start-form {
     flex-direction: row;
     gap: 16px;
@@ -277,11 +296,12 @@ select {
     flex: 1 1 25%;
   }
 
-  .movies-wrapper {
+  .home-movies-wrapper {
     flex-direction: row;
     justify-content: center;
   }
 
+  .home-movie-poster,
   .movie-poster {
     margin: 0;
   }
@@ -297,6 +317,11 @@ select {
   footer {
     justify-content: flex-start;
     max-width: 730px;
+  }
+  .movies-wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
 
